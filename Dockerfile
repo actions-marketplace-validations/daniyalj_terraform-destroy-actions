@@ -13,6 +13,8 @@ RUN apk update && \
     rm -rf /var/cache/apk/* && \
     rm -rf /var/tmp/*
     
+RUN chmod +x /destroy.sh
+
 WORKDIR /
 
 ENTRYPOINT ["/destroy.sh"]
